@@ -1,0 +1,45 @@
+{
+	"geode": "5.8.2",
+	"gd": {
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081",
+		"ios": "2.2081"
+	},
+	"id": "com.itzzyann.geometrydashbreeze",
+	"name": "Geometry Dash: Breeze",
+	"version": "v1.4.0",
+	"developers": [
+        "ItzZyann",
+        "Andrexel"
+    ],
+	"description": "An unofficial spin-off of Geometry Dash by Andrexel.",
+    "early-load": true,
+    "resources": {
+        "files": [
+            "resources/Songs/*.mp3",
+            "resources/Songs/*.ogg",
+            "resources/Others/Assets.zip"
+        ]
+    },
+	"dependencies": {
+		"geode.node-ids": ">=v1.23.3"
+	},
+    "incompatibilities": {
+		"capeling.geometry-dash-lunar": ">=1.0.0",
+		"chumiiu.geometry_dash_time_reborn": ">=1.0.0",
+		"teamtcm.geometry_dash_odyssey": ">=1.0.0",
+		"itzkiba.better_progression": ">=1.0.0",
+		"gdutilsdevs.gdutils": ">=1.0.0",
+		"dankmeme.globed2": ">=1.0.0",
+		"bitz.hard_mode": ">=1.0.0",
+		"ninxout.redash": ">=1.0.0",
+		"alphalaneous.alphas_geode_utils": {
+			"version": ">=1.0.0",
+			"platforms": [
+				"android",
+				"ios"
+			]
+		}
+	}
+}
