@@ -73,21 +73,25 @@ void MenuLayerH::onPlay(CCObject* pSender) {
 }
 
 void MenuLayerH::onCreator(CCObject* pSender) {
-    FLAlertLayer::create(
-        "Not available!",
-        "This <cl>Feature</c> is only available in the full"
-        " version of <cg>Geometry Dash</c>.",
-        "OK"
-    )->show();
+    // FLAlertLayer::create(
+    //     "Not available!",
+    //     "This <cl>Feature</c> is only available in the full"
+    //     " version of <cg>Geometry Dash</c>.",
+    //     "OK"
+    // )->show();
+
+    onOnlyFullVersion(nullptr);
 }
 
 void MenuLayerH::onAchievements(CCObject* pSender) {
-    FLAlertLayer::create(
-        "Not available!",
-        "This <cl>feature</c> is only available in the full"
-        " version of <cg>Geometry Dash</c>.",
-        "OK"
-    )->show();
+    // FLAlertLayer::create(
+    //     "Not available!",
+    //     "This <cl>feature</c> is only available in the full"
+    //     " version of <cg>Geometry Dash</c>.",
+    //     "OK"
+    // )->show();
+
+    onOnlyFullVersion(nullptr);
 }
 
 void MenuLayerH::onCredits(CCObject* pSender) {
@@ -95,6 +99,22 @@ void MenuLayerH::onCredits(CCObject* pSender) {
         "<cy>Game Owner: RobTop Games</c>"
         "\n<co>FanGame Developer: Andrexel</c>"
         "\n<cg>Mod Developer: ItzZyann</c>"
-        "\n<cl>Special Thanks: Eplecentra,\nCapelling and iArtie</c>",
+        "\n<cl>Special Thanks: Eplecentra,\nCapelling, iArtie and GDColon</c>",
         "OK", nullptr, 350.0f)->show();
+}
+
+void MenuLayerH::onOnlyFullVersion(CCObject* pSender) {
+    int backgroundColor = 5;
+    auto dialogLines = CCArray::create();
+
+    dialogLines->addObject(DialogObject::create(
+    	"The Mechanic",
+    	"That is only available in the <cl>full</c> version of <cg>Geometry Dash</c>.",
+    	37, 1.0f, false, ccWHITE
+    ));
+
+    DialogLayer* dialog = DialogLayer::createWithObjects(dialogLines, backgroundColor);
+    dialog->updateChatPlacement(DialogChatPlacement::Center);
+    dialog->animateInRandomSide();
+    dialog->addToMainScene();
 }

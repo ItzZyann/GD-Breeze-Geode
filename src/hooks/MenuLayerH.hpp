@@ -20,4 +20,5 @@ public:
     $override void onAchievements(cocos2d::CCObject* pSender);
 
     void onCredits(cocos2d::CCObject* pSender);
+    void onOnlyFullVersion(cocos2d::CCObject* pSender);
 };
