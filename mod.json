@@ -6,7 +6,7 @@
 		"mac": "2.2081",
 		"ios": "2.2081"
 	},
-	"id": "com.itzzyann.geometrydashbreeze",
+	"id": "itzzyann.geometrydashbreeze",
 	"name": "Geometry Dash: Breeze",
 	"version": "v1.4.0",
 	"developers": [
@@ -22,6 +22,7 @@
             "resources/Others/Assets.zip"
         ]
     },
+    "tags": ["gameplay", "offline"],
 	"dependencies": {
 		"geode.node-ids": ">=v1.23.3"
 	},

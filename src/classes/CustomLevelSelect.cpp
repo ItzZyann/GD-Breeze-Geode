@@ -1,6 +1,9 @@
 #include "CustomLevelSelect.hpp"
 using namespace geode::prelude;
 
+// credits to iArtie
+// for FreeGames mod
+
 CustomLevelSelect* CustomLevelSelect::create(int pPage) {
     auto ret = new CustomLevelSelect();
 

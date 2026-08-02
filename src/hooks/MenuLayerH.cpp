@@ -72,27 +72,8 @@ void MenuLayerH::onPlay(CCObject* pSender) {
         );
 }
 
-void MenuLayerH::onCreator(CCObject* pSender) {
-    // FLAlertLayer::create(
-    //     "Not available!",
-    //     "This <cl>Feature</c> is only available in the full"
-    //     " version of <cg>Geometry Dash</c>.",
-    //     "OK"
-    // )->show();
-
-    onOnlyFullVersion(nullptr);
-}
-
-void MenuLayerH::onAchievements(CCObject* pSender) {
-    // FLAlertLayer::create(
-    //     "Not available!",
-    //     "This <cl>feature</c> is only available in the full"
-    //     " version of <cg>Geometry Dash</c>.",
-    //     "OK"
-    // )->show();
-
-    onOnlyFullVersion(nullptr);
-}
+void MenuLayerH::onCreator(CCObject* pSender) { onOnlyFullVersion(nullptr); }
+void MenuLayerH::onAchievements(CCObject* pSender) { onOnlyFullVersion(nullptr); }
 
 void MenuLayerH::onCredits(CCObject* pSender) {
     FLAlertLayer::create(nullptr, "CREDITS",
@@ -104,6 +85,9 @@ void MenuLayerH::onCredits(CCObject* pSender) {
 }
 
 void MenuLayerH::onOnlyFullVersion(CCObject* pSender) {
+    // credits gdcologne
+    // hehehe
+    
     int backgroundColor = 5;
     auto dialogLines = CCArray::create();
 

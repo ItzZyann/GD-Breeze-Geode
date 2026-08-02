@@ -4,6 +4,9 @@
 #include <Geode/binding/LocalLevelManager.hpp>
 using namespace geode::prelude;
 
+// Credits to capeling for
+// custom level thingy
+
 GJGameLevel* LevelToolsH::getLevel(int pLevelID, bool pLoaded) {
     auto level = GJGameLevel::create();
 

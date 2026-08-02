@@ -1,7 +1,13 @@
-# About
+# <cy>About</c>
 
-**Geometry Dash: Breeze** is a fanmade spinoff of Geometry Dash, originally created by **Andrexel**. It features **new and unique original levels** spanning a range of difficulties from Normal to Demon.
+<cg>Geometry Dash: Breeze</c> is a fanmade spinoff of Geometry Dash, originally created by <co>Andrexel</c>. This is a Geode mod port, bringing the full fangame experience directly inside Geometry Dash on Windows and Android — no separate APK needed.
 
-## Levels
+The mod uses a <cl>separate save file</c>, so your vanilla GD progress is always safe and restored when the mod is disabled.
 
-The game includes 12 levels of varying difficulties, from Normal all the way up to a hard Demon finale.
+## <cg>Credits</c>
+
+- <cy>RobTop Games</c> — Geometry Dash
+- <co>Andrexel</c> — Geometry Dash Breeze owner
+- <cg>ItzZyann</c> — Geode mod port (Windows & Android)
+- <cl>Eplecentra</c> — Windows support (Older versions)
+- <cl>Capeling, iArtie, GDColon</c> — Special thanks
