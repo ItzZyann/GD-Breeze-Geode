@@ -3,7 +3,7 @@ using namespace geode::prelude;
 
 bool LoadingLayerH::init(bool pRefresh) {
     if (!LoadingLayer::init(pRefresh)) return false;
-
+    
     auto zipFilePath = Mod::get()->getResourcesDir() / "Assets.zip";
     auto unzipDir = Mod::get()->getResourcesDir();
     auto path = utils::file::Unzip::intoDir(zipFilePath, unzipDir, true);
@@ -28,18 +28,14 @@ bool LoadingLayerH::init(bool pRefresh) {
     auto logo = (CCSprite*)(getChildren()->objectAtIndex(1));
     auto rtLogo = (CCSprite*)(getChildren()->objectAtIndex(2));
 
-    logo->setPositionY(logo->getPositionY() + 15);
-    rtLogo->setPositionY(rtLogo->getPositionY() + 15);
+    logo->setPositionY(logo->getPositionY() + 33);
+    rtLogo->setPositionY(rtLogo->getPositionY() + 25);
 
-    auto fgLogo = CCLabelBMFont::create(
-        "BREEZE",
-        "goldFont.fnt"
-    );
-
-    fgLogo->setScale(1.1f);
+    auto fgLogo = CCSprite::create("GJ_breezeLogo.png");
+    fgLogo->setScale(1.0f);
     fgLogo->setPosition(ccp(
-        logo->getPositionX() + 153.0f,
-        logo->getPositionY() - 38.0f
+        logo->getPositionX() + 152.0f,
+        logo->getPositionY() - 50.0f
     ));
     addChild(fgLogo, 100);
 
@@ -62,11 +58,4 @@ bool LoadingLayerH::init(bool pRefresh) {
     GM->m_clickedEditor = true;
 
     return true;
-}
-
-const char* LoadingLayerH::getLoadingString() {
-    return (
-        "Mod developed by ItzZyann"
-        "\nAll rights reserved :D"
-    );
 }

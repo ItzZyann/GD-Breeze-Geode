@@ -1,6 +1,9 @@
 # Geometry Dash: Breeze | Changelog
+## v1.4.3
+- Bug fixes and Tweaks
+- Added breeze logo
 
-## v1.4.1
+## v1.4.1 - v1.4.2
 - Minor bug fixes
 
 ## v1.4.0

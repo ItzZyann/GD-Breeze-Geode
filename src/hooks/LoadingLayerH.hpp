@@ -5,5 +5,4 @@
 class $modify(LoadingLayerH, LoadingLayer) {
 public:
     $override bool init(bool pRefresh);
-    $override const char* getLoadingString();
 };

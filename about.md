@@ -1,13 +1,13 @@
 # <cy>About</c>
 
-<cg>Geometry Dash: Breeze</c> is a fanmade spinoff of Geometry Dash, originally created by <co>Andrexel</c>. This is a Geode mod port, bringing the full fangame experience directly inside Geometry Dash on Windows and Android — no separate APK needed.
+Geometry Dash: <cp>Breeze</c> is a fan-made Geometry Dash spinoff created by <co>Andrexel</c>. It features a collection of original levels with gameplay and visuals inspired by the style of the official Geometry Dash levels, while adding its own ideas and charm.
 
-The mod uses a <cl>separate save file</c>, so your vanilla GD progress is always safe and restored when the mod is disabled.
+The mod uses its own save file, so your normal Geometry Dash progress won't be affected. Your original save is kept safe and will be restored when the mod is disabled. It's still recommended to save your data beforehand.
 
-## <cg>Credits</c>
+## Credits
 
-- <cy>RobTop Games</c> — Geometry Dash
-- <co>Andrexel</c> — Geometry Dash Breeze owner
-- <cg>ItzZyann</c> — Geode mod port (Windows & Android)
-- <cl>Eplecentra</c> — Windows support (Older versions)
-- <cl>Capeling, iArtie, GDColon</c> — Special thanks
+- <cy>RobTop Games</c>: Geometry Dash
+- <co>Andrexel</c>: Creator of Geometry Dash: Breeze
+- <cg>ItzZyann</c>: Geode mod port (Windows & Android)
+- <cl>Eplecentra</c>: Windows support (older versions)
+- <cl>Capeling, iArtie, GDColon</c>: Special thanks

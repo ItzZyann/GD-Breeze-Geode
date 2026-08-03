@@ -33,15 +33,13 @@ bool MenuLayerH::init() {
     // for fangame logo
     // bcuz yes
     auto logo = (CCSprite*)(getChildren()->objectAtIndex(1));
-    auto fgLogo = CCLabelBMFont::create(
-        "BREEZE",
-        "goldFont.fnt"
-    );
+    logo->setPositionY(logo->getPositionY() + 10.0f);
 
-    fgLogo->setScale(1.1f);
+    auto fgLogo = CCSprite::create("GJ_breezeLogo.png");
+    fgLogo->setScale(0.9f);
     fgLogo->setPosition(ccp(
-        logo->getPositionX() + 153.0f,
-        logo->getPositionY() - 38.0f
+        logo->getPositionX() + 152.0f,
+        logo->getPositionY() - 45.5f
     ));
     addChild(fgLogo, 100);
     
@@ -76,12 +74,57 @@ void MenuLayerH::onCreator(CCObject* pSender) { onOnlyFullVersion(nullptr); }
 void MenuLayerH::onAchievements(CCObject* pSender) { onOnlyFullVersion(nullptr); }
 
 void MenuLayerH::onCredits(CCObject* pSender) {
-    FLAlertLayer::create(nullptr, "CREDITS",
+    auto dir = CCDirector::get();
+    auto winSize = dir->getWinSize();
+
+    auto alert = FLAlertLayer::create(nullptr, "CREDITS",
         "<cy>Game Owner: RobTop Games</c>"
         "\n<co>FanGame Developer: Andrexel</c>"
         "\n<cg>Mod Developer: ItzZyann</c>"
         "\n<cl>Special Thanks: Eplecentra,\nCapelling, iArtie and GDColon</c>",
-        "OK", nullptr, 350.0f)->show();
+        "OK", nullptr, 350.0f);
+
+    auto layer = alert->m_mainLayer;
+    auto menu = alert->m_buttonMenu;
+    
+    auto bgSpr = typeinfo_cast<CCScale9Sprite*>(layer->getChildByID("background"));
+    auto title = typeinfo_cast<CCLabelBMFont*>(layer->getChildByID("title"));
+    auto okBtn = typeinfo_cast<CCMenuItemSpriteExtra*>(menu->getChildByID("button-1"));
+
+    bgSpr->setVisible(false);
+    // title->setPositionY(title->getPositionY() + 5.0f);
+    // okBtn->setPositionY(okBtn->getPositionY() - 5.0f);
+
+    auto brownBgSpr = CCScale9Sprite::create("GJ_square01.png", {0.0f, 0.0f, 80.0f, 80.0f});
+    brownBgSpr->setContentSize(bgSpr->getContentSize());
+    brownBgSpr->setPosition(bgSpr->getPosition());
+    brownBgSpr->setID("brown-background");
+    layer->addChild(brownBgSpr, -2);
+
+    auto brownBgSpr2 = CCScale9Sprite::create("GJ_square01.png", {0.0f, 0.0f, 80.0f, 80.0f});
+    brownBgSpr2->setContentSize({
+        bgSpr->getContentSize().width - 20.0f,
+        bgSpr->getContentSize().height - 20.0f,
+
+    });
+    brownBgSpr2->setPosition(bgSpr->getPosition());
+    brownBgSpr2->setColor(ccc3(0, 0, 0));
+    brownBgSpr2->setOpacity(100);
+    brownBgSpr2->setID("brown-background2");
+    layer->addChild(brownBgSpr2, -1);
+
+    // disable pop animation
+    // instead use our custom ones
+    alert->m_noElasticity = true;
+
+    layer->setPositionX(-winSize.width);
+    layer->runAction(
+        CCEaseElasticOut::create(
+            CCMoveTo::create(.5, CCPoint(0, 0)), 1
+        )
+    );
+
+    alert->show();
 }
 
 void MenuLayerH::onOnlyFullVersion(CCObject* pSender) {

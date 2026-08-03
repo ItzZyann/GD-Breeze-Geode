@@ -8,7 +8,7 @@
 	},
 	"id": "itzzyann.geometrydashbreeze",
 	"name": "Geometry Dash: Breeze",
-	"version": "v1.4.2",
+	"version": "v1.4.3",
 	"developers": [
         "ItzZyann",
         "Andrexel"
@@ -17,10 +17,14 @@
     "early-load": true,
     "resources": {
         "files": [
-            "resources/Songs/*.mp3",
-            "resources/Songs/*.ogg",
-            "resources/Others/Assets.zip"
-        ]
+            "resources/audios/*.mp3",
+            "resources/audios/*.ogg",
+            "resources/Assets.zip"
+        ],
+        "sprites": [
+            "resources/sprites/*.png"
+        ],
+        "spritesheets": { }
     },
     "tags": ["gameplay", "offline"],
 	"dependencies": {
