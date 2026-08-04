@@ -54,7 +54,7 @@ bool CustomLevelSelect::init(int pPage) {
     m_scrollLayer->updatePages();
 
     this->updatePageWithObject(
-        m_scrollLayer->m_pages->objectAtIndex(pPage % 12),
+        m_scrollLayer->m_pages->objectAtIndex(pPage % 3),
         m_scrollLayer->m_dynamicObjects->objectAtIndex(pPage)
     );
 

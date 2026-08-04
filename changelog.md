@@ -1,4 +1,8 @@
 # Geometry Dash: Breeze | Changelog
+## v1.4.4
+- Fix when quiting a level
+(Sorry my bad.)
+
 ## v1.4.3
 - Bug fixes and Tweaks
 - Added breeze logo

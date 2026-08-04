@@ -11,7 +11,7 @@ public:
 		auto GM = GameManager::sharedState();
 		auto levelID = GM->m_playLayer->m_level->m_levelID;
 
-		if (levelID > 6000 && levelID < 6013) {
+		if (levelID >= 6000 && levelID <= 6012) {
 			auto scene = CCScene::create();
 			scene->addChild(CustomLevelSelect::create(levelID - 6001));
 
